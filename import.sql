@@ -4,8 +4,9 @@ CREATE TABLE `admin1CodesAscii` (
   `code` char(15) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `name` text COLLATE utf8_unicode_ci,
   `nameAscii` text COLLATE utf8_unicode_ci,
-  `geonameid` int(11) DEFAULT NULL,
-  PRIMARY KEY (`code`)
+  `geonameid` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`code`),
+  KEY `geonameid` (`geonameid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 DROP TABLE IF EXISTS `countryinfo`;
@@ -36,7 +37,7 @@ CREATE TABLE `countryinfo` (
 DROP TABLE IF EXISTS `geoname`;
 
 CREATE TABLE `geoname` (
-  `geonameid` int(11) NOT NULL,
+  `geonameid` int(11) unsigned NOT NULL,
   `name` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `asciiname` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `alternatenames` varchar(4000) COLLATE utf8_unicode_ci DEFAULT NULL,
