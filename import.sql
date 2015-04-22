@@ -5,8 +5,7 @@ CREATE TABLE `admin1CodesAscii` (
   `name` text COLLATE utf8_unicode_ci,
   `nameAscii` text COLLATE utf8_unicode_ci,
   `geonameid` int(11) unsigned DEFAULT NULL,
-  PRIMARY KEY (`code`),
-  KEY `geonameid` (`geonameid`)
+  PRIMARY KEY (`code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 DROP TABLE IF EXISTS `countryinfo`;
