@@ -1,0 +1,9 @@
+.env.*.php
+.env.php
+.DS_Store
+Thumbs.db
+CA.txt
+US.txt
+admin1CodesASCII.txt
+readme.txt
+countryInfo.txt
