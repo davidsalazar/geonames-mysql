@@ -16,4 +16,4 @@ unzip US.zip && rm US.zip
 
 
 echo "Dropping tables if exist,  create tables for database $dbname... then import."
-mysql -h$dbhost -P$dbport -u$dbusername -p$dbpassword $dbname < import.sql
+mysql --local-infile -h$dbhost -P$dbport -u$dbusername -p$dbpassword $dbname < import.sql
